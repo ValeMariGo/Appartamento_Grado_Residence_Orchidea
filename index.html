@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Appartamento Grado - Residence Orchidea</title>
+<title>Residence Orchidea Grado | Holiday Apartment</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -19,126 +19,98 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:linear-gradient(135deg,#1f3c5b,#4f7ea8);
     padding:20px;
-    overflow-x:hidden;
-    position:relative;
-}
-
-body::before{
-    content:'';
-    position:fixed;
-    inset:0;
-    background:
-        linear-gradient(
-            rgba(10,20,40,.45),
-            rgba(0,0,0,.60)
-        ),
-        url('ResidenceOrchidea.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    z-index:-1;
-    animation:zoomBg 35s ease-in-out infinite alternate;
-}
-
-@keyframes zoomBg{
-    from{
-        transform:scale(1);
-    }
-    to{
-        transform:scale(1.10);
-    }
+    min-height:100vh;
 }
 
 .container{
-    width:100%;
-    max-width:680px;
+    max-width:900px;
+    margin:auto;
 }
 
 .card{
-    background:rgba(255,255,255,.14);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.20);
-    border-radius:32px;
-    padding:40px 30px;
-    text-align:center;
-    color:#fff;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.35),
-        0 0 0 1px rgba(255,255,255,.08);
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    overflow:hidden;
+    color:white;
+    box-shadow:0 20px 60px rgba(0,0,0,.30);
 }
 
-.logo{
-    font-size:80px;
+.hero{
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.70)
+    );
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:40px;
+}
+
+.hero-overlay h1{
+    font-size:2.8rem;
     margin-bottom:10px;
 }
 
-h1{
-    font-size:2.2rem;
-    font-weight:700;
-    margin-bottom:8px;
+.hero-overlay p{
+    font-size:1.1rem;
 }
 
-.subtitle{
-    font-size:1rem;
-    opacity:.95;
-    margin-bottom:30px;
+.content{
+    padding:30px;
+}
+
+.language-switcher{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.language-switcher button{
+    border:none;
+    background:white;
+    color:#333;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.language-switcher button:hover{
+    transform:translateY(-2px);
 }
 
 .btn{
-    position:relative;
-    overflow:hidden;
     display:block;
     text-decoration:none;
-    color:#fff;
-    margin:16px 0;
+    color:white;
+    text-align:center;
     padding:18px;
-    border-radius:20px;
-    font-size:17px;
+    margin-bottom:15px;
+    border-radius:18px;
     font-weight:600;
-    transition:.35s;
-    box-shadow:0 12px 30px rgba(0,0,0,.30);
-    border:1px solid rgba(255,255,255,.15);
-    letter-spacing:.3px;
-
-    opacity:0;
-    animation:fadeUp .8s forwards;
-}
-
-.btn:nth-of-type(1){animation-delay:.10s;}
-.btn:nth-of-type(2){animation-delay:.20s;}
-.btn:nth-of-type(3){animation-delay:.30s;}
-.btn:nth-of-type(4){animation-delay:.40s;}
-.btn:nth-of-type(5){animation-delay:.50s;}
-
-.btn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-120%;
-    width:70%;
-    height:100%;
-    background:
-      linear-gradient(
-       120deg,
-       transparent,
-       rgba(255,255,255,.55),
-       transparent);
-    transition:.8s;
-}
-
-.btn:hover::before{
-    left:130%;
+    transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-5px) scale(1.02);
-    box-shadow:0 18px 40px rgba(0,0,0,.40);
+    transform:translateY(-3px);
 }
 
 .whatsapp{
@@ -158,65 +130,61 @@ h1{
 }
 
 .facebook{
-    background:linear-gradient(
-       135deg,
-       #1877F2,
-       #1459C7
-    );
+    background:linear-gradient(135deg,#1877F2,#1459C7);
 }
 
 .description{
-    margin-top:30px;
-    font-size:15px;
+    margin-top:25px;
     line-height:1.9;
 }
 
 .reviews{
-    margin-top:28px;
+    margin-top:25px;
     padding:20px;
-    background:rgba(255,255,255,.10);
     border-radius:18px;
+    background:rgba(255,255,255,.10);
+    line-height:1.8;
+}
+
+.map{
+    margin-top:30px;
+}
+
+.map iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    border-radius:18px;
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
     line-height:1.8;
     font-size:14px;
 }
 
-.footer{
-    margin-top:30px;
-    font-size:13px;
-    line-height:1.8;
-    opacity:.95;
+.lang-en{
+    display:none;
 }
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
+@media(max-width:768px){
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.hero img{
+    height:260px;
 }
 
-@media(max-width:600px){
+.hero-overlay{
+    padding:20px;
+}
 
-    h1{
-        font-size:1.8rem;
-    }
+.hero-overlay h1{
+    font-size:2rem;
+}
 
-    .logo{
-        font-size:65px;
-    }
-
-    .btn{
-        font-size:16px;
-        padding:16px;
-    }
 }
 
 </style>
-
 </head>
 
 <body>
@@ -225,18 +193,37 @@ h1{
 
 <div class="card">
 
-<div class="logo">🌸</div>
+<div class="hero">
+
+<img src="ResidenceOrchidea.jpg" alt="Residence Orchidea Grado">
+
+<div class="hero-overlay">
 
 <h1>Residence Orchidea</h1>
 
-<p class="subtitle">
+<p class="lang-it">
 Appartamento Vacanze a Grado • Comfort • Mare • Relax
 </p>
 
+<p class="lang-en">
+Holiday Apartment in Grado • Comfort • Sea • Relax
+</p>
+
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="language-switcher">
+<button onclick="setLanguage('it')">🇮🇹 Italiano</button>
+<button onclick="setLanguage('en')">🇬🇧 English</button>
+</div>
+
 <a class="btn whatsapp"
-href="https://wa.me/393333593290?text=Buongiorno,%20vorrei%20ricevere%20informazioni%20per%20un%20soggiorno%20presso%20Residence%20Orchidea%20Grado"
+href="https://wa.me/393333593290?text=Buongiorno,%20vorrei%20ricevere%20informazioni%20sul%20Residence%20Orchidea"
 target="_blank">
-📱 Contattaci su WhatsApp
+📱 WhatsApp
 </a>
 
 <a class="btn google"
@@ -248,49 +235,133 @@ target="_blank">
 <a class="btn airbnb"
 href="https://www.airbnb.it/rooms/1322219846887851726?guests=1&adults=1&s=67&unique_share_id=11b9557a-fdea-4665-93c4-3d5a5b75d897"
 target="_blank">
-🏡 Prenota su Airbnb
+🏡 Airbnb
 </a>
 
 <a class="btn booking"
 href="https://www.booking.com/hotel/it/appartamento-grado-residence-orchidea.html?aid=808251"
 target="_blank">
-🛎️ Prenota su Booking.com
+🛎️ Booking.com
 </a>
 
 <div class="description">
 
-<strong>🇮🇹 Italiano</strong><br>
+<div class="lang-it">
+
+<h3>🇮🇹 Benvenuti</h3>
+
 Benvenuti al Residence Orchidea di Grado.
-Una soluzione accogliente e moderna per famiglie e coppie che desiderano trascorrere una vacanza rilassante vicino al mare.
 
-<br><br>
+Situato in Via del Turismo 16, a pochi minuti dalla spiaggia, offre comfort, tranquillità e una posizione ideale per scoprire il centro storico, la laguna e le bellezze di Grado.
 
-<strong>🇬🇧 English</strong><br>
+</div>
+
+<div class="lang-en">
+
+<h3>🇬🇧 Welcome</h3>
+
 Welcome to Residence Orchidea in Grado.
-A comfortable and modern holiday apartment ideal for couples and families looking for a relaxing stay near the beach.
+
+Located in Via del Turismo 16, just a few minutes from the beach, it offers comfort, relaxation and an ideal location to discover the old town, the lagoon and the beauty of Grado.
+
+</div>
 
 </div>
 
 <div class="reviews">
-⭐⭐⭐⭐⭐<br>
+
+<div class="lang-it">
+
+⭐⭐⭐⭐⭐<br><br>
+
 <strong>I nostri ospiti apprezzano:</strong><br>
-Posizione strategica • Vicinanza alla spiaggia • Comfort moderno • Relax • Accoglienza familiare
+
+✓ Posizione strategica<br>
+✓ Vicinanza alla spiaggia<br>
+✓ Comfort moderno<br>
+✓ Relax e tranquillità<br>
+✓ Accoglienza familiare
+
+</div>
+
+<div class="lang-en">
+
+⭐⭐⭐⭐⭐<br><br>
+
+<strong>Our guests appreciate:</strong><br>
+
+✓ Excellent location<br>
+✓ Walking distance to the beach<br>
+✓ Modern comfort<br>
+✓ Relaxing atmosphere<br>
+✓ Friendly hospitality
+
+</div>
+
+</div>
+
+<div class="map">
+
+<h3 class="lang-it">📍 Dove ci troviamo</h3>
+
+<h3 class="lang-en">📍 Location</h3>
+
+<iframe
+src="https://maps.google.com/maps?q=Via%20del%20Turismo%2016%20Grado&t=&z=16&ie=UTF8&iwloc=&output=embed"
+loading="lazy">
+</iframe>
+
 </div>
 
 <a class="btn facebook"
 href="https://www.facebook.com/profile.php?id=61571989381574"
 target="_blank">
-📘 Seguici su Facebook
+📘 Seguici su Facebook / Follow us on Facebook
 </a>
 
 <div class="footer">
-📍 Grado (GO), Friuli Venezia Giulia<br>
-🌊 Mare Adriatico • Italia
+
+<div class="lang-it">
+📍 Via del Turismo, 16<br>
+34073 Grado (GO), Friuli Venezia Giulia<br>
+🌊 Mare Adriatico • Italia<br>
+La tua vacanza sul mare
+</div>
+
+<div class="lang-en">
+📍 Via del Turismo, 16<br>
+34073 Grado (GO), Friuli Venezia Giulia<br>
+🌊 Adriatic Sea • Italy<br>
+Your holiday by the sea
 </div>
 
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+<script>
+
+function setLanguage(lang){
+
+const italian=document.querySelectorAll('.lang-it');
+const english=document.querySelectorAll('.lang-en');
+
+if(lang==='it'){
+    italian.forEach(el=>el.style.display='block');
+    english.forEach(el=>el.style.display='none');
+}
+else{
+    italian.forEach(el=>el.style.display='none');
+    english.forEach(el=>el.style.display='block');
+}
+
+}
+
+</script>
 
 </body>
 </html>
