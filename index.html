@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +18,14 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#1f3c5b,#4f7ea8);
-    padding:20px;
     min-height:100vh;
+    padding:20px;
+    background:linear-gradient(
+        135deg,
+        #1e3c72,
+        #2a5298,
+        #4f7ea8
+    );
 }
 
 .container{
@@ -31,7 +35,7 @@ body{
 
 .card{
     background:rgba(255,255,255,.12);
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(20px);
     border-radius:30px;
     overflow:hidden;
     color:white;
@@ -39,36 +43,46 @@ body{
 }
 
 .hero{
-    position:relative;
-}
-
-.hero img{
-    width:100%;
-    height:420px;
-    object-fit:cover;
-    display:block;
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
+    text-align:center;
+    padding:50px 30px 35px 30px;
     background:linear-gradient(
-        rgba(0,0,0,.15),
-        rgba(0,0,0,.70)
+        135deg,
+        rgba(255,255,255,.16),
+        rgba(255,255,255,.05)
     );
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:40px;
 }
 
-.hero-overlay h1{
+.flower-icon{
+    font-size:90px;
+    margin-bottom:15px;
+    animation:floatFlower 4s ease-in-out infinite;
+}
+
+@keyframes floatFlower{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.hero h1{
     font-size:2.8rem;
-    margin-bottom:10px;
+    margin-bottom:12px;
+    letter-spacing:1px;
 }
 
-.hero-overlay p{
+.hero p{
     font-size:1.1rem;
+    opacity:.95;
 }
 
 .content{
@@ -78,18 +92,18 @@ body{
 .language-switcher{
     display:flex;
     justify-content:center;
-    gap:10px;
+    gap:12px;
     margin-bottom:25px;
 }
 
 .language-switcher button{
     border:none;
+    border-radius:30px;
+    padding:10px 20px;
+    font-weight:600;
+    cursor:pointer;
     background:white;
     color:#333;
-    padding:10px 20px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:600;
     transition:.3s;
 }
 
@@ -102,15 +116,15 @@ body{
     text-decoration:none;
     color:white;
     text-align:center;
-    padding:18px;
-    margin-bottom:15px;
-    border-radius:18px;
     font-weight:600;
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:15px;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
 .whatsapp{
@@ -141,13 +155,17 @@ body{
 .reviews{
     margin-top:25px;
     padding:20px;
-    border-radius:18px;
     background:rgba(255,255,255,.10);
+    border-radius:18px;
     line-height:1.8;
 }
 
 .map{
     margin-top:30px;
+}
+
+.map h3{
+    margin-bottom:15px;
 }
 
 .map iframe{
@@ -159,7 +177,7 @@ body{
 
 .footer{
     text-align:center;
-    padding:25px;
+    padding:30px;
     line-height:1.8;
     font-size:14px;
 }
@@ -170,16 +188,12 @@ body{
 
 @media(max-width:768px){
 
-.hero img{
-    height:260px;
-}
-
-.hero-overlay{
-    padding:20px;
-}
-
-.hero-overlay h1{
+.hero h1{
     font-size:2rem;
+}
+
+.flower-icon{
+    font-size:70px;
 }
 
 }
@@ -195,9 +209,7 @@ body{
 
 <div class="hero">
 
-<img src="ResidenceOrchidea.jpg" alt="Residence Orchidea Grado">
-
-<div class="hero-overlay">
+<div class="flower-icon">🌸</div>
 
 <h1>Residence Orchidea</h1>
 
@@ -208,8 +220,6 @@ Appartamento Vacanze a Grado • Comfort • Mare • Relax
 <p class="lang-en">
 Holiday Apartment in Grado • Comfort • Sea • Relax
 </p>
-
-</div>
 
 </div>
 
@@ -235,13 +245,13 @@ target="_blank">
 <a class="btn airbnb"
 href="https://www.airbnb.it/rooms/1322219846887851726?guests=1&adults=1&s=67&unique_share_id=11b9557a-fdea-4665-93c4-3d5a5b75d897"
 target="_blank">
-🏡 Airbnb
+🏡 Prenota su Airbnb / Book on Airbnb
 </a>
 
 <a class="btn booking"
 href="https://www.booking.com/hotel/it/appartamento-grado-residence-orchidea.html?aid=808251"
 target="_blank">
-🛎️ Booking.com
+🛎️ Prenota su Booking.com / Book on Booking.com
 </a>
 
 <div class="description">
@@ -252,7 +262,7 @@ target="_blank">
 
 Benvenuti al Residence Orchidea di Grado.
 
-Situato in Via del Turismo 16, a pochi minuti dalla spiaggia, offre comfort, tranquillità e una posizione ideale per scoprire il centro storico, la laguna e le bellezze di Grado.
+Situato in Via del Turismo 16, a pochi minuti dalla spiaggia, offre comfort, tranquillità e una posizione ideale per scoprire il centro storico, la laguna e le meraviglie della città.
 
 </div>
 
@@ -262,7 +272,7 @@ Situato in Via del Turismo 16, a pochi minuti dalla spiaggia, offre comfort, tra
 
 Welcome to Residence Orchidea in Grado.
 
-Located in Via del Turismo 16, just a few minutes from the beach, it offers comfort, relaxation and an ideal location to discover the old town, the lagoon and the beauty of Grado.
+Located in Via del Turismo 16, just a few minutes from the beach, it offers comfort, relaxation and an ideal location to discover the historic centre, the lagoon and the beauty of Grado.
 
 </div>
 
@@ -272,7 +282,9 @@ Located in Via del Turismo 16, just a few minutes from the beach, it offers comf
 
 <div class="lang-it">
 
-⭐⭐⭐⭐⭐<br><br>
+⭐⭐⭐⭐⭐
+
+<br><br>
 
 <strong>I nostri ospiti apprezzano:</strong><br>
 
@@ -286,7 +298,9 @@ Located in Via del Turismo 16, just a few minutes from the beach, it offers comf
 
 <div class="lang-en">
 
-⭐⭐⭐⭐⭐<br><br>
+⭐⭐⭐⭐⭐
+
+<br><br>
 
 <strong>Our guests appreciate:</strong><br>
 
@@ -303,7 +317,6 @@ Located in Via del Turismo 16, just a few minutes from the beach, it offers comf
 <div class="map">
 
 <h3 class="lang-it">📍 Dove ci troviamo</h3>
-
 <h3 class="lang-en">📍 Location</h3>
 
 <iframe
@@ -323,16 +336,16 @@ target="_blank">
 
 <div class="lang-it">
 📍 Via del Turismo, 16<br>
-34073 Grado (GO), Friuli Venezia Giulia<br>
-🌊 Mare Adriatico • Italia<br>
-La tua vacanza sul mare
+34073 Grado (GO)<br>
+Friuli Venezia Giulia<br>
+🌊 Mare Adriatico • Italia
 </div>
 
 <div class="lang-en">
 📍 Via del Turismo, 16<br>
-34073 Grado (GO), Friuli Venezia Giulia<br>
-🌊 Adriatic Sea • Italy<br>
-Your holiday by the sea
+34073 Grado (GO)<br>
+Friuli Venezia Giulia<br>
+🌊 Adriatic Sea • Italy
 </div>
 
 </div>
@@ -351,12 +364,12 @@ const italian=document.querySelectorAll('.lang-it');
 const english=document.querySelectorAll('.lang-en');
 
 if(lang==='it'){
-    italian.forEach(el=>el.style.display='block');
-    english.forEach(el=>el.style.display='none');
+    italian.forEach(el => el.style.display='block');
+    english.forEach(el => el.style.display='none');
 }
 else{
-    italian.forEach(el=>el.style.display='none');
-    english.forEach(el=>el.style.display='block');
+    italian.forEach(el => el.style.display='none');
+    english.forEach(el => el.style.display='block');
 }
 
 }
